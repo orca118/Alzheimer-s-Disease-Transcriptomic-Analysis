@@ -8,9 +8,9 @@
 Thumbs.db
 
 # Large data files (optional)
-*.csv
-*.tsv
+# *.csv
+# *.tsv
 
 # Figures (optional)
-*.png
+# *.png
 *.pdf
