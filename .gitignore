@@ -1,0 +1,16 @@
+# R files
+.Rhistory
+.RData
+.Rproj.user/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large data files (optional)
+*.csv
+*.tsv
+
+# Figures (optional)
+*.png
+*.pdf

@@ -1,0 +1,31 @@
+Comparison Summary
+==================
+
+Primary discovery dataset: GSE261050 AD vs Control
+Validation dataset: GSE33000 AD vs Control
+Exploratory comparison: GSE33000 HD vs Control
+
+HDAC summary:
+# A tibble: 6 × 7
+  dataset   contrast      top_n_label top_n hdac_count hdac_prop top_hdac_drugs    
+  <chr>     <chr>         <chr>       <dbl>      <int>     <dbl> <chr>             
+1 GSE261050 AD vs Control Top 15         15          3    0.2    trichostatin a; b…
+2 GSE33000  AD vs Control Top 15         15          1    0.0667 trichostatin a    
+3 GSE33000  HD vs Control Top 15         15          1    0.0667 trichostatin a    
+4 GSE261050 AD vs Control Top 20         20          3    0.15   trichostatin a; b…
+5 GSE33000  AD vs Control Top 20         20          1    0.0667 trichostatin a    
+6 GSE33000  HD vs Control Top 20         20          1    0.0667 trichostatin a    
+
+Pathway overlap summary:
+# A tibble: 4 × 6
+  database top_n_label top_n overlap_count jaccard overlap_terms                   
+  <chr>    <chr>       <dbl>         <int>   <dbl> <chr>                           
+1 KEGG     Top 10         10             3   0.176 "shigellosis; mapk signaling pa…
+2 KEGG     Top 15         15             3   0.111 "shigellosis; mapk signaling pa…
+3 GO BP    Top 10         10             0   0     ""                              
+4 GO BP    Top 15         15             0   0     ""                              
+
+Interpretation note:
+- Compare AD to AD across datasets for validation.
+- Treat HD as a separate exploratory contrast.
+- Do not use HD as the main validation for the AD claim.
