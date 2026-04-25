@@ -8,8 +8,8 @@
 Thumbs.db
 
 # Large data files (optional)
-# *.csv
-# *.tsv
+*.csv
+!results/*.csv
 
 # Figures (optional)
 # *.png
