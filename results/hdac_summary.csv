@@ -1,0 +1,7 @@
+dataset,contrast,top_n_label,top_n,hdac_count,hdac_prop,top_hdac_drugs
+GSE261050,AD vs Control,Top 15,15,3,0.2,trichostatin a; belinostat; vorinostat
+GSE33000,AD vs Control,Top 15,15,1,0.06666666666666667,trichostatin a
+GSE33000,HD vs Control,Top 15,15,1,0.06666666666666667,trichostatin a
+GSE261050,AD vs Control,Top 20,20,3,0.15,trichostatin a; belinostat; vorinostat
+GSE33000,AD vs Control,Top 20,20,1,0.06666666666666667,trichostatin a
+GSE33000,HD vs Control,Top 20,20,1,0.06666666666666667,trichostatin a

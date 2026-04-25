@@ -1,0 +1,5 @@
+database,top_n_label,top_n,overlap_count,jaccard,overlap_terms
+KEGG,Top 10,10,3,0.17647058823529413,shigellosis; mapk signaling pathway; neurotrophin signaling pathway
+KEGG,Top 15,15,3,0.1111111111111111,shigellosis; mapk signaling pathway; neurotrophin signaling pathway
+GO BP,Top 10,10,0,0,
+GO BP,Top 15,15,0,0,
