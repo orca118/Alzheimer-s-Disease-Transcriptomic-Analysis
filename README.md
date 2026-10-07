@@ -1,44 +1,91 @@
-# 🧠 Alzheimer’s Disease Transcriptomic Analysis
+# Identifying Potential Drug Candidates for Alzheimer’s Disease Using Transcriptomic Analysis
 
-This project uses transcriptomic data to identify potential therapeutic targets for Alzheimer’s disease through differential gene expression and drug repurposing analysis.
+This repository contains the analysis code used for the study:
 
-## 📊 Overview
-- Dataset 1: GSE261050 (RNA-seq, primary analysis)
-- Dataset 2: GSE33000 (microarray, validation)
+**Identifying Potential Drug Candidates for Alzheimer’s Disease Using Transcriptomic Analysis**
 
-### Methods
-- Differential expression (DESeq2, limma)
-- Pathway enrichment (KEGG)
-- Drug repurposing (L1000CDS2)
-- Cross-dataset validation
+**Sophia Wang**  
+Richard Montgomery High School, USA
 
-## 📁 Project Structure
-- `scripts/` – analysis pipelines  
-- `data/` – processed datasets  
-- `results/` – output tables and figures  
-- `paper/` – manuscript and figures  
+*The National High School Journal of Science*, 2026  
+Received: April 30, 2026  
+Accepted: July 25, 2026  
+Electronic access: September 30, 2026
 
-## 🚀 How to Run
-1. Run primary analysis:
-   scripts/01_primary_analysis/01_deseq2_pipeline_GSE261050_v4.R  
+---
 
-2. Run validation:
-   scripts/02_validation_analysis/01_limma_pipeline_GSE33000_symbolized_v7.R  
+## Overview
 
-3. Run drug analysis:
-   scripts/03_drug_repurposing/02_l1000_analysis_GSE33000_manual_tsv.R  
+This study used publicly available transcriptomic datasets to investigate Alzheimer’s disease (AD)-associated gene-expression changes and identify potential drug-repurposing candidates.
 
-4. Run comparison:
-   scripts/04_comparison/03_compare_GSE261050_vs_GSE33000_v1.R  
+The workflow included:
 
-5. Generate figures:
-   scripts/05_figures/05_make_all_figures_publication_quality.R  
+- Differential gene-expression analysis
+- KEGG pathway enrichment
+- Computational drug repurposing using L1000CDS2
+- Independent cross-dataset validation
+- Comparison of pathway- and drug-level signals across transcriptomic platforms
 
-## 📌 Notes
-- All datasets are publicly available from GEO  
-  https://www.ncbi.nlm.nih.gov/geo/
+The primary analysis used RNA-seq dataset **GSE261050**, and validation was performed using microarray dataset **GSE33000**.
 
-- L1000CDS2 results were manually downloaded due to API instability
+The study was designed to evaluate the reproducibility of transcriptomic disease signatures and computational drug-repurposing predictions across independent Alzheimer’s disease datasets.
 
-## 📄 License
-This project is licensed under the MIT License.
+---
+
+## Datasets
+
+### GSE261050 — Primary RNA-seq Dataset
+
+The primary dataset contains postmortem bulk RNA-seq data from the anterior cingulate cortex (BA32) and insula.
+
+For the analysis reported in the paper:
+
+- **101 samples**
+- **60 unique donors**
+- **76 Alzheimer’s disease samples**
+- **25 control samples**
+
+Only samples annotated as Alzheimer’s disease or control were included in the primary differential-expression analysis.
+
+Available metadata included:
+
+- Age
+- Sex
+- Brain region
+- Post-mortem interval (PMI)
+- RNA integrity number (RIN)
+- Sequencing batch
+- Extraction batch
+
+The primary DESeq2 model used disease status as the main variable.
+
+### GSE33000 — Independent Validation Dataset
+
+GSE33000 is a microarray dataset containing samples from:
+
+- Alzheimer’s disease
+- Huntington’s disease
+- Controls
+
+Only Alzheimer’s disease and control samples were used for the primary validation analysis.
+
+Huntington’s disease samples were analyzed separately as an exploratory comparison and were not included in the main AD validation.
+
+Because GSE261050 is RNA-seq and GSE33000 is microarray-based, the validation focused on cross-platform reproducibility of pathway- and drug-level signals rather than exact replication of individual differential-expression results.
+
+---
+
+## Repository Structure
+
+```text
+.
+├── scripts/
+│   ├── 01_primary_analysis/
+│   ├── 02_validation_analysis/
+│   ├── 03_drug_repurposing/
+│   ├── 04_comparison/
+│   └── 05_figures/
+├── data/
+├── results/
+├── paper/
+└── README.md
